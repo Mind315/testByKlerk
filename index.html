@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Open+Sans:wght@400;700&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Test by Klerk</title>
+    <style>
+        .toggle-checkbox:checked,
+        .toggle-checkbox-card:checked {
+          right: 1px;
+          border-color: #316FEE;
+        }   
+        .toggle-checkbox:checked + .toggle-label,
+        .toggle-checkbox-card:checked + .toggle-label-card {
+          background-color: #316FEE;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-white font-['Roboto']">
+    <div class="container max-w-screen-lg mx-auto">
+        <header class="text-center mt-45 pb-[20px]  pt-[48px]">
+            <div>
+                <img class="mx-auto cursor-pointer" src="images/klerk.png" alt="логотип">
+            </div>
+            <div class="flex justify-center text-[13px] text-[#999999] font-normal leading-4 mt-[25px] ">
+                <a class="border-b-[1px] border-[#e6edff] mr-[30px] relative before:absolute before:block  before:content-[''] before:-right-6 before:top-1.5 before:bg-[url('images/arrow.png')] before:w-[13px] before:h-[16px] before:bg-no-repeat hover:text-[#5A8CF1] hover:border-[#5A8CF1]" href="#">Главная</a>
+
+                <a class="border-b-[1px] border-[#e6edff] mr-[30px] relative before:absolute before:block  before:content-[''] before:-right-6 before:top-1.5 before:bg-[url('images/arrow.png')] before:w-[13px] before:h-[16px] before:bg-no-repeat hover:text-[#5A8CF1] hover:border-[#5A8CF1]" href="#">Рассылки</a>
+
+                <a class="border-b-[1px] border-[#e6edff] hover:text-[#5A8CF1] hover:border-[#5A8CF1]" href="#">Хлебные крошки</a>
+            </div>
+            <h1 class="text-[32px] md:text-[56px] mt-3  font-medium">Подписки &laquo;Клерка&raquo;</h1>
+            <div class="text-[16px] text-[#666666] font-normal mt-4">
+                <a class="mr-[24px] pb-[20px] hover:text-[#5A8CF1] hover:border-[#5A8CF1] hover:border-b-2" href="#">Рассылки</a>
+                <a class="mr-[24px] pb-[20px] hover:text-[#5A8CF1] hover:border-[#5A8CF1] hover:border-b-2"  href="#">Соцсети</a>
+                <a class="pb-[20px] hover:text-[#5A8CF1] hover:border-[#5A8CF1] hover:border-b-2" href="#">Мессенджеры</a>
+            </div>
+        </header>
+
+        <main class="bg-[#f5f5f8] rounded-2xl">
+            <form action="">
+                <h2 class="text-center font-medium text-2xl pt-[48px]">Выберите рассылки, которые подходят именно вам</h2>
+                <div class="mx-auto max-w-[90%] mt-[20px] mb-[16px] relative">
+                    <input class="p-4 text-[#666666] placeholder:text-gray-400 rounded-md w-[92%]  focus:outline-none" type="email" name="" id="" placeholder="Электронная почта">
+                    <button class="hidden sm:inline-block py-4 px-8 bg-[#316fee] hover:bg-blue-700 transition duration-300 text-white rounded-full absolute right-[0%]">Подписаться</button>
+                    <button class="sm:hidden py-4 px-5 bg-[#316fee] hover:bg-blue-700 transition duration-300 text-white rounded-full absolute right-[0%]">&#9658;</button>
+                </div>
+          
+
+                <div class="relative inline-block w-8 ml-[5%] mr-2 align-middle select-none">
+                    <input type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-4 h-4 rounded-full bg-white border-1 appearance-none cursor-pointer"/>
+                    <label for="toggle" class="toggle-label block overflow-hidden h-4 rounded-full bg-gray-300 hover:bg-gray-400 transition duration-300 cursor-pointer"></label>
+                </div>
+                <label for="toggle" class="text-sm select-none">Подписаться на все рассылки</label>
+
+            </form>
+
+            <!-- Cards section -->
+            <section class="bg-[#f5f5f8] mt-[30px] pb-8 rounded-b-2xl flex flex-wrap justify-evenly">
+
+                <!-- Card -->
+                <div class="relative w-[343px] sm:w-[476px] bg-white rounded-2xl pl-[24px] py-[24px] hover:shadow-xl transition duration-300 mb-6">
+                    <img class="absolute top-4 right-4 md:w-[80px] md:h-[80px]" src="images/cardImage.png" alt="скрепка" width="48" height="48">
+                    <p class="text-[13px] text-[#999999]" >Перед рассветом</p>
+                    <h3 class="text-xl">Утренний бухгалтер</h3>
+                    <p class="text-sm text-[#666666] mt-2">Самые важные новости и события за день. <br>
+                       Кратко, по делу, структурировано.</p>
+                    <p class="before:absolute before:block  before:content-[''] before:left-1 before:bg-[url('images/vector.png')] before:w-[16px] before:h-[12px]  mt-4 pl-7 relative text-sm">Новости для бухгалтера, ИП и диреткора</p>
+
+                    <p class="before:absolute before:block  before:content-[''] before:left-1 before:bg-[url('images/vector.png')] before:w-[16px] before:h-[12px] text-sm pl-7 relative mt-1">Подборка статей за день.</p>
+                   
+                    <div class="relative inline-block w-12 mr-2 mt-0 align-middle select-none ">
+                        <input type="checkbox" name="toggle" id="toggle-card" class="toggle-checkbox-card absolute block w-6 h-6 rounded-full bg-white border-1 appearance-none cursor-pointer"/>
+                        <label for="toggle-card" class="toggle-label-card block overflow-hidden h-6 rounded-full bg-gray-300 hover:bg-gray-400 transition duration-300 cursor-pointer"></label>
+                    </div>
+                    <label for="toggle-card" class="inline-block text-sm mt-5 select-none">Уже получает 59 342 человек</label>
+                </div>
+
+                <!-- Card -->
+                <div class="relative w-[343px] sm:w-[476px] bg-white rounded-2xl pl-[24px] py-[24px] hover:shadow-xl transition duration-300 mb-6">
+                    <img class="absolute top-4 right-4 md:w-[80px] md:h-[80px]" src="images/cardImage.png" alt="скрепка" width="48" height="48">
+                    <p class="text-[13px] text-[#999999]" >Перед рассветом</p>
+                    <h3 class="text-xl">Утренний бухгалтер</h3>
+                    <p class="text-sm text-[#666666] mt-2">Самые важные новости и события за день. <br>
+                       Кратко, по делу, структурировано.</p>
+                    <p class="before:absolute before:block  before:content-[''] before:left-1 before:bg-[url('images/vector.png')] before:w-[16px] before:h-[12px]  mt-4 pl-7 relative text-sm">Новости для бухгалтера, ИП и диреткора</p>
+
+                    <p class="before:absolute before:block  before:content-[''] before:left-1 before:bg-[url('images/vector.png')] before:w-[16px] before:h-[12px] text-sm pl-7 relative mt-1">Подборка статей за день.</p>
+                   
+                    <div class="relative inline-block w-12 mr-2 mt-0 align-middle select-none ">
+                        <input type="checkbox" name="toggle" id="toggle-card" class="toggle-checkbox-card absolute block w-6 h-6 rounded-full bg-white border-1 appearance-none cursor-pointer"/>
+                        <label for="toggle-card" class="toggle-label-card block overflow-hidden h-6 rounded-full bg-gray-300 hover:bg-gray-400 transition duration-300 cursor-pointer"></label>
+                    </div>
+                    <label for="toggle-card" class="inline-block text-sm mt-5 select-none">Уже получает 59 342 человек</label>
+                </div>
+
+                <!-- Card -->
+                <div class="relative w-[343px] sm:w-[476px] bg-white rounded-2xl pl-[24px] py-[24px] hover:shadow-xl transition duration-300 mb-6">
+                    <img class="absolute top-4 right-4 md:w-[80px] md:h-[80px]" src="images/cardImage.png" alt="скрепка" width="48" height="48">
+                    <p class="text-[13px] text-[#999999]" >Перед рассветом</p>
+                    <h3 class="text-xl">Утренний бухгалтер</h3>
+                    <p class="text-sm text-[#666666] mt-2">Самые важные новости и события за день. <br>
+                       Кратко, по делу, структурировано.</p>
+                    <p class="before:absolute before:block  before:content-[''] before:left-1 before:bg-[url('images/vector.png')] before:w-[16px] before:h-[12px]  mt-4 pl-7 relative text-sm">Новости для бухгалтера, ИП и диреткора</p>
+
+                    <p class="before:absolute before:block  before:content-[''] before:left-1 before:bg-[url('images/vector.png')] before:w-[16px] before:h-[12px] text-sm pl-7 relative mt-1">Подборка статей за день.</p>
+                   
+                    <div class="relative inline-block w-12 mr-2 mt-0 align-middle select-none ">
+                        <input type="checkbox" name="toggle" id="toggle-card" class="toggle-checkbox-card absolute block w-6 h-6 rounded-full bg-white border-1 appearance-none cursor-pointer"/>
+                        <label for="toggle-card" class="toggle-label-card block overflow-hidden h-6 rounded-full bg-gray-300 hover:bg-gray-400 transition duration-300 cursor-pointer"></label>
+                    </div>
+                    <label for="toggle-card" class="inline-block text-sm mt-5 select-none">Уже получает 59 342 человек</label>
+                </div>
+
+                <!-- Card -->
+                <div class="relative w-[343px] sm:w-[476px] bg-white rounded-2xl pl-[24px] py-[24px] hover:shadow-xl transition duration-300 mb-6">
+                    <img class="absolute top-4 right-4 md:w-[80px] md:h-[80px]" src="images/cardImage.png" alt="скрепка" width="48" height="48">
+                    <p class="text-[13px] text-[#999999]" >Перед рассветом</p>
+                    <h3 class="text-xl">Утренний бухгалтер</h3>
+                    <p class="text-sm text-[#666666] mt-2">Самые важные новости и события за день. <br>
+                       Кратко, по делу, структурировано.</p>
+                    <p class="before:absolute before:block  before:content-[''] before:left-1 before:bg-[url('images/vector.png')] before:w-[16px] before:h-[12px]  mt-4 pl-7 relative text-sm">Новости для бухгалтера, ИП и диреткора</p>
+
+                    <p class="before:absolute before:block  before:content-[''] before:left-1 before:bg-[url('images/vector.png')] before:w-[16px] before:h-[12px] text-sm pl-7 relative mt-1">Подборка статей за день.</p>
+                   
+                    <div class="relative inline-block w-12 mr-2 mt-0 align-middle select-none ">
+                        <input type="checkbox" name="toggle" id="toggle-card" class="toggle-checkbox-card absolute block w-6 h-6 rounded-full bg-white border-1 appearance-none cursor-pointer"/>
+                        <label for="toggle-card" class="toggle-label-card block overflow-hidden h-6 rounded-full bg-gray-300 hover:bg-gray-400 transition duration-300 cursor-pointer"></label>
+                    </div>
+                    <label for="toggle-card" class="inline-block text-sm mt-5 select-none">Уже получает 59 342 человек</label>
+                </div>
+
+            </section>
+        </main>  
+    </div>
+</body>
+</html>
